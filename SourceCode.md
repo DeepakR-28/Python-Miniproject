@@ -1,16 +1,17 @@
 # Source code for movie name guessing game
 ```
-name = input("What is your name?\n ") 
+
+ name = input("What is your name?\n ") 
 # Username 
-    
 print("Good Luck ! ", str(name),"\n") 
+
 def movie_game():
   import random 
   # Randomly chooses an element from the list
     
-  Actors = ['Cop and gangster/ Based on an Indian Mythology', 'jithu Jiladhi', 'Tamizhann DAAAAAA!', 'Actors: Yuvan, Thala, Thangamey','Actors: Ajith & Meera Jasmine', 'Actors: Dhanush & Sherin', 'Actors: Surya & Priya Mani', 'Actors: Surya & Nayanthara','Actors: Rajnikanth & Shobhana', 'Actors: RajniKanth & Priya Raman', 'Actors: Jayam Ravi & Sayyeshaa']  
+  Actors = ['Cop and gangster/ Based on an Indian Mythology', 'jithu Jiladhi', 'Only you only you!', 'Actors: Yuvan, Thala, Thangamey','Actors: Ajith & Meera Jasmine', 'Actors: Dhanush & Sherin', 'Actors: Surya & Priya Mani', 'Actors: Surya & Nayanthara','Actors: Rajnikanth & Shobhana', 'Actors: RajniKanth & Priya Raman', 'Actors: Jayam Ravi & Sayyeshaa']  
 
-  movie_names = ['vikramvedha','theri','Mersal','arrambam','aanjanaya','thulluvathoilamai','rathasarithiram','aathavan','thalapathi','valli','vanamagan']
+  movie_names = ['vikramvedha','theri','mersal','arrambam','aanjanaya','thulluvathoilamai','rathasarithiram','aathavan','thalapathi','valli','vanamagan']
 
   movie = random.choice(movie_names)
   #choose a movie from the list
@@ -77,16 +78,20 @@ def movie_game():
               print("\nYou Lose") 
               print("Correct Answer is :-",str(movie))
   print("Do you want to play again (Y/N)")
+
   response = input()
-  while(response!="N" or response!='n'):
-  
-    if(response == 'y' or response=='Y'):
-      movie_game();
-    else:
-      break
-    # print("Do you want to play again (Y/N")
-  print("Thank you for playing")      
+
+
+  if(response == 'y' or response=='Y'):
+    movie_game();
+  elif(response == 'n' or response=='N'):
+    print("Thank you for playing")
+  else:
+    print("Invalid Input \n Exiting...")   
+
+
 movie_game();
+
 
 
 ```
